@@ -9,7 +9,7 @@ router.post('/', async (request, response)=>{
     // check if all the reuired fields present in the request
     if( !request.body.title ||
         !request.body.author ||
-        !request.body.pulisheYear)
+        !request.body.publishYear)
     {
         // if not then return 
         return response.status(400).send(
@@ -25,7 +25,7 @@ router.post('/', async (request, response)=>{
         const newBook = {
             title: request.body.title,
             author: request.body.author,
-            pulisheYear: request.body.pulisheYear
+            publishYear: request.body.publishYear
     
     
         }
@@ -88,7 +88,7 @@ router.get('/', async (request,response)=>{
             // check if all the reuired fields present in the request
     if( !request.body.title ||
         !request.body.author ||
-        !request.body.pulisheYear)
+        !request.body.publishYear)
     {
         // if not then return 
         return response.status(400).send(
